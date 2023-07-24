@@ -19,7 +19,7 @@ mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({ secret: 'my-secret-key', resave: false, saveUninitialized: false }));
-// Membuat middleware untuk memeriksa apakah pengguna telah terotentikasi atau belum
+
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
       return next();
@@ -27,12 +27,12 @@ function ensureAuthenticated(req, res, next) {
     res.redirect('/login');
   }
   
-  // Contoh penggunaan middleware untuk rute yang memerlukan otorisasi
+  // jalur user
   router.get('/admin/posts', ensureAuthenticated, (req, res) => {
-    // Render halaman untuk mengelola posting
+    // dashboard
   });
   
-// Menggunakan session untuk menyimpan status otentikasi pengguna
+
 app.use(session({
     secret: 'my-secret-key',
     resave: false,
@@ -45,7 +45,7 @@ app.use(session({
   
   // ...
   
-  // Membuat variabel global untuk mengakses user saat ini dari template (opsional)
+  // 
   app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     next();

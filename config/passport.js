@@ -4,7 +4,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const User = require('../models/User');
 
 passport.use(new LocalStrategy(
-  { usernameField: 'email' }, // Jika Anda ingin menggunakan email sebagai username
+  { usernameField: 'email' }, // emus(email user)
   async (email, password, done) => {
     try {
       const user = await User.findOne({ email });
@@ -25,7 +25,7 @@ passport.use(new LocalStrategy(
   }
 ));
 
-// Serialize dan deserialize user (opsional, tergantung pada kebutuhan Anda)
+
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
