@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
   // *
 });
 
-// Fungsi Kanggo nganghash password ssa acan di simpen ka hati :v
+// Fungsi Kanggo nganghash password saacan di simpen ka hati :v
 userSchema.pre('save', async function (next) {
   try {
     if (!this.isModified('password')) {

@@ -21,7 +21,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Rute untuk masuk (login)
+// jalur asup
 router.get('/login', (req, res) => {
   res.render('login');
 });
@@ -29,10 +29,10 @@ router.get('/login', (req, res) => {
 router.post('/login', passport.authenticate('local', {
   successRedirect: '/',
   failureRedirect: '/login',
-  failureFlash: true // Aktifkan jika Anda ingin menggunakan pesan kesalahan flash
+  failureFlash: true // flash
 }));
 
-// Rute untuk keluar (logout)
+// jalan kaluar
 router.get('/logout', (req, res) => {
   req.logout();
   res.redirect('/');
