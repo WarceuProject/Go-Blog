@@ -17,8 +17,8 @@ mongoose.connection.on('error', (error) => console.error(error));
 mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(session({ secret: 'my-secret-key', resave: false, saveUninitialized: false }));
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(session({ secret: 'my-secret-key', resave: false, saveUninitialized: false }));
 
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
@@ -44,8 +44,8 @@ app.use(session({
   app.use(passport.session());
   
   // ...
-  
-  // 
+
+
   app.use((req, res, next) => {
     res.locals.currentUser = req.user;
     next();
