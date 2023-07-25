@@ -4,7 +4,7 @@
   "description": " This project simple cms blog ",
   "main": "index.js",
   "scripts": {
-    "test": "npm install"
+    "goblog": "npm install"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "goblog": "^0.0.2",
     "mongoose": "^7.4.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0"

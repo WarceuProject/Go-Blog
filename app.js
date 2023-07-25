@@ -3,22 +3,22 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const passport = require('passport');
-const User = require('./models/User');
+const User = require('./src/models/User.js');
 
 const app = express();
 const port = 3000;
 
 // Ngatur koneksi ka MongoDB
-mongoose.connect('mongodb://localhost/my_blog_cms', {
+mongoose.connect('mongodb://localhost/Go-Blog', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-mongoose.connection.on('error', (error) => console.error(error));
-mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
+ mongoose.connection.on('error', (error) => console.error(error));
+ mongoose.connection.once('open', () => console.log('Connected to MongoDB'));
 
 // Middleware
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(session({ secret: 'my-secret-key', resave: false, saveUninitialized: false }));
+ app.use(bodyParser.urlencoded({ extended: true }));
+ app.use(session({ secret: 'my-secret-key', resave: false, saveUninitialized: false }));
 
 function ensureAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
