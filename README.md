@@ -1,4 +1,4 @@
 # Go-Blog
 This project simple cms blog
 
-Project di bongkar ulang 
+Project ini di bongkar ulang 
