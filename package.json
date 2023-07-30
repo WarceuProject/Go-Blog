@@ -1,0 +1,25 @@
+{
+  "name": "go-blog",
+  "version": "1.0.0",
+  "description": " This project simple cms blog ",
+  "main": "index.js",
+  "scripts": {
+    "test": "go-blog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WarceuProject/Go-Blog.git"
+  },
+  "keywords": [
+    "go",
+    "blog",
+    "cms",
+    "blog"
+  ],
+  "author": "kirasinigami",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WarceuProject/Go-Blog/issues"
+  },
+  "homepage": "https://github.com/WarceuProject/Go-Blog#readme"
+}
