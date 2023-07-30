@@ -1,0 +1,25 @@
+<!-- views/tambah-post.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tambah Post</title>
+</head>
+<body>
+  <h1>Tambah Posting Baru</h1>
+  <form action="/posts" method="POST">
+    <label>Judul:</label>
+    <input type="text" name="judul" required><br>
+
+    <label>Konten:</label>
+    <textarea name="konten" rows="4" required></textarea><br>
+
+    <label>Tanggal Publikasi:</label>
+    <input type="date" name="tanggal_publikasi" required><br>
+
+    <label>Kategori:</label>
+    <input type="text" name="kategori_id" required><br>
+
+    <button type="submit">Simpan</button>
+  </form>
+</body>
+</html>

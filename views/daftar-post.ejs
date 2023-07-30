@@ -1,0 +1,15 @@
+<!-- views/daftar-post.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daftar Post</title>
+</head>
+<body>
+  <h1>Daftar Posting Blog</h1>
+  <ul>
+    <% posts.forEach((post) => { %>
+      <li><a href="/post<%= post.id %>"><%= post.judul %></a></li>
+    <% }); %>
+  </ul>
+</body>
+</html>
